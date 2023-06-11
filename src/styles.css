@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@keyframes headerLoad {
+  0% {
+    scale: 10;
+  }
+  100% {
+    scale: 1;
+  }
+
+
+}
+
+
+:root {
+  /* Colors */
+
+  /* Main Colors */
+  --primary-clr: rgb(12, 202, 255);
+  --secondary-clr: #2b2b2b;
+
+  /* Background Color */
+  --bg-clr: rgb(0 10 31/1);
+  --bg-clr: rgb(3, 0, 31);
+
+  /* Text Color */
+  --text-clr: #fff;
+  --faded-text-clr: #b3b3b3;
+
+  /* Border Color */
+  --border-clr: #2b2b2b;
+    --faded-border-clr: #3c3c3c;
+
+  /* Button Color */
+  --btn-clr: #2b2b2b;
+  --btn-hover-clr: #3c3c3c;
+
+  /* Badge */
+  --badge-clr: rgb(18, 25, 54);
+}
+.main-txt {
+  color: var(--text-clr);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.font-reg{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.clr-text {
+  color: var(--primary-clr);
+}
+.header-btn {
+  background-color: none;
+  border: 2px solid white;
+  border-radius: 15px;
+  background: none;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+.header-btn:visited {
+  color: white;
+}
+.header-btn:hover {
+  background-color: var(--primary-clr);
+  border: 2px solid var(--primary-clr);
+  border-radius: 50px;
+}
+.font-bold{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.txt-primary{
+    color: #fff;
+}
+.txt-secondary{
+    color: var(--faded-text-clr);
+}
+.app-background {
+  background-color: var(--bg-clr);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+
+.img-card-hover{
+    /* move up 10px */
+    transform: translateY(-10px);
+    border: 1px solid var(--primary-clr) !important; 
+}
+
+.img-card{
+    transition: all 0.1s ease-in-out;
+    border: 1px solid var(--faded-border-clr);
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.primary-a-button{
+    background: none;
+    border: 1px solid var(--faded-text-clr);
+    border-radius: 5px;
+    padding: 0.5rem 4rem;
+    color: var(--faded-text-clr);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.primary-a-button:hover{
+    background-color: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+    color: #fff;
+    border-radius: 50px;
+}
