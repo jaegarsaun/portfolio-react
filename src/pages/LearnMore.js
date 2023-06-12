@@ -28,6 +28,7 @@ import anime from 'animejs/lib/anime.es.js';
 
 import SectionHead from '../components/SectionHead';
 import ProjectCard from '../components/ProjectCard';
+import FlyingWords from '../components/FlyingWords';
 
 function LearnMore() {
 
@@ -52,6 +53,8 @@ function LearnMore() {
         <ChakraUI />,
     ]
 
+    
+
     const toolList = successTools.map((tool, index) => {
         // Render each SVG
         return (
@@ -68,14 +71,14 @@ function LearnMore() {
         anime({
             targets: '.svg',
             scale: [
-              {value: .1, easing: 'easeOutSine', duration: 900},
-              {value: 1, easing: 'easeInOutQuad', duration: 1200}
+                { value: .1, easing: 'easeOutSine', duration: 900 },
+                { value: 1, easing: 'easeInOutQuad', duration: 1200 }
             ],
-            delay: anime.stagger(500, {grid: [14, 5], from: 'center'}),
+            delay: anime.stagger(500, { grid: [14, 5], from: 'center' }),
             alternate: true,
             loop: true,
-            });
-        
+        });
+
     }, [toolList]); // Run the animation whenever the toolList changes
 
 
@@ -133,6 +136,16 @@ function LearnMore() {
                             </ul>
                         </div>
                     </div>
+                    <div style={styles.bio}>
+                        <p className='font-reg txt-secondary' style={styles.bioTxt}>
+                            People I've worked with have described me as...
+                        </p>
+                        <div style={styles.movingWordsCont}>
+
+                            <FlyingWords />
+
+                        </div>
+                    </div>
 
                 </section>
             </main>
@@ -178,6 +191,7 @@ const styles = {
         alignItems: 'center',
         justifyContent: 'space-between',
         width: '100%',
+        marginBottom: '3rem',
     },
     bigtext: {
         fontSize: '2.5rem',
@@ -213,6 +227,15 @@ const styles = {
         lineHeight: '1.75rem',
         textAlign: 'center',
     },
+    movingWordsCont: {
+        width: '100%',
+        height: '100px',
+        overflow: 'hidden',
+        position: 'relative',
+        marginBottom: '3rem',
+
+    },
+
 
 }
 

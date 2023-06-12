@@ -127,3 +127,13 @@ section{
     color: #fff;
     border-radius: 50px;
 }
+
+.letter {
+  transition: all 0.2s ease-in-out;
+  
+}
+
+.letter:hover {
+  color: var(--primary-clr);
+  transform: translateY(10px);
+}
