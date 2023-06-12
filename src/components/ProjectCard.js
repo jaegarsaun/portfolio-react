@@ -15,8 +15,6 @@ function ProjectCard(props) {
     });
 
 
-
-
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
