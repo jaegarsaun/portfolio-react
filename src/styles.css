@@ -94,7 +94,9 @@
   height: 100vh;
   z-index: -1;
 }
-
+section{
+    padding: 0rem 1rem;
+}
 
 .img-card-hover{
     /* move up 10px */
